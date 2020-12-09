@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.5.2">
+<eagle version="9.6.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -132,6 +132,35 @@
 <wire x1="0.8" y1="-2.15" x2="0.8" y2="-1.45" width="0.127" layer="21"/>
 <text x="-2.54" y="2.54" size="0.8128" layer="25" font="vector" align="top-left">&gt;NAME</text>
 </package>
+<package name="2MS1-T1-B4-M2-Q-E">
+<pad name="1" x="-2.54" y="0" drill="1"/>
+<pad name="2" x="0" y="0" drill="1"/>
+<pad name="3" x="2.54" y="0" drill="1"/>
+<wire x1="-4.065" y1="2.54" x2="4.065" y2="2.54" width="0.127" layer="21"/>
+<wire x1="4.065" y1="2.54" x2="4.065" y2="-2.54" width="0.127" layer="21"/>
+<wire x1="4.065" y1="-2.54" x2="-4.065" y2="-2.54" width="0.127" layer="21"/>
+<wire x1="-4.065" y1="-2.54" x2="-4.065" y2="2.54" width="0.127" layer="21"/>
+</package>
+<package name="8MS8P1B05VS2QES-1">
+<pad name="G1" x="0" y="5.08" drill="1"/>
+<pad name="1" x="0" y="2.54" drill="1"/>
+<pad name="2" x="0" y="0" drill="1"/>
+<pad name="3" x="0" y="-2.54" drill="1"/>
+<pad name="G2" x="0" y="-5.08" drill="1"/>
+<wire x1="-2.54" y1="5.08" x2="2.54" y2="5.08" width="0.127" layer="21"/>
+<wire x1="2.54" y1="5.08" x2="2.54" y2="-5.08" width="0.127" layer="21"/>
+<wire x1="2.54" y1="-5.08" x2="-2.54" y2="-5.08" width="0.127" layer="21"/>
+<wire x1="-2.54" y1="-5.08" x2="-2.54" y2="5.08" width="0.127" layer="21"/>
+</package>
+<package name="SS12D01GX">
+<pad name="1" x="-2.54" y="0" drill="0.8"/>
+<pad name="2" x="0" y="0" drill="0.8"/>
+<pad name="3" x="2.54" y="0" drill="0.8"/>
+<wire x1="-4.4" y1="1.95" x2="4.4" y2="1.95" width="0.127" layer="21"/>
+<wire x1="4.4" y1="1.95" x2="4.4" y2="-1.95" width="0.127" layer="21"/>
+<wire x1="4.4" y1="-1.95" x2="-4.4" y2="-1.95" width="0.127" layer="21"/>
+<wire x1="-4.4" y1="-1.95" x2="-4.4" y2="1.95" width="0.127" layer="21"/>
+</package>
 </packages>
 <symbols>
 <symbol name="SWITCH_1_2">
@@ -240,6 +269,57 @@
 <connects>
 <connect gate="G$1" pin="A" pad="1 2"/>
 <connect gate="G$1" pin="B" pad="3 4"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="2MS1-T1-B4-M2-Q-E" prefix="S">
+<gates>
+<gate name="G$1" symbol="SWITCH_1_2" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="2MS1-T1-B4-M2-Q-E">
+<connects>
+<connect gate="G$1" pin="A" pad="1"/>
+<connect gate="G$1" pin="B" pad="3"/>
+<connect gate="G$1" pin="C" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="8MS8P1B05VS2QES-1">
+<gates>
+<gate name="G$1" symbol="SWITCH_1_2" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="8MS8P1B05VS2QES-1">
+<connects>
+<connect gate="G$1" pin="A" pad="1"/>
+<connect gate="G$1" pin="B" pad="3"/>
+<connect gate="G$1" pin="C" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="SS12D01GX">
+<gates>
+<gate name="G$1" symbol="SWITCH_1_2" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SS12D01GX">
+<connects>
+<connect gate="G$1" pin="A" pad="1"/>
+<connect gate="G$1" pin="B" pad="3"/>
+<connect gate="G$1" pin="C" pad="2"/>
 </connects>
 <technologies>
 <technology name=""/>

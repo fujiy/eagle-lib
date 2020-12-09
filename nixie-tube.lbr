@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.5.2">
+<eagle version="9.6.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="50" unitdist="mil" unit="mm" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="no" active="yes"/>
@@ -76,23 +76,29 @@
 <package name="IN-12_PS">
 <description>IN-12A, IN-12B, IN-15A, IN-15B
 Using "Mill-Max Manufacturing Corp. 0341-0-15-15-30-27-10-0" pin socket</description>
-<pad name="1" x="4" y="8" drill="2"/>
-<pad name="2" x="5.75" y="4.5" drill="2"/>
-<pad name="3" x="5.75" y="0" drill="2"/>
-<pad name="4" x="5.75" y="-4.5" drill="2"/>
-<pad name="5" x="4" y="-8" drill="2"/>
-<pad name="6" x="0" y="-9" drill="2"/>
-<pad name="7" x="-4" y="-8" drill="2"/>
-<pad name="8" x="-5.75" y="-4.5" drill="2"/>
-<pad name="9" x="-5.75" y="0" drill="2"/>
-<pad name="10" x="-5.75" y="4.5" drill="2"/>
-<pad name="11" x="-4" y="8" drill="2"/>
-<pad name="12" x="0" y="9" drill="2"/>
-<wire x1="-10.5" y1="9" x2="-10.5" y2="-9" width="0.127" layer="51"/>
-<wire x1="-10.5" y1="-9" x2="10.5" y2="-9" width="0.127" layer="51" curve="128"/>
-<wire x1="10.5" y1="-9" x2="10.5" y2="9" width="0.127" layer="51"/>
-<wire x1="10.5" y1="9" x2="-10.5" y2="9" width="0.127" layer="51" curve="128"/>
-<hole x="0" y="0" drill="3.5"/>
+<pad name="1" x="4" y="-8" drill="1.6"/>
+<pad name="2" x="5.75" y="-4.5" drill="1.6"/>
+<pad name="3" x="5.75" y="0" drill="1.6"/>
+<pad name="4" x="5.75" y="4.5" drill="1.6"/>
+<pad name="5" x="4" y="8" drill="1.6"/>
+<pad name="6" x="0" y="9" drill="1.6"/>
+<pad name="7" x="-4" y="8" drill="1.6"/>
+<pad name="8" x="-5.75" y="4.5" drill="1.6"/>
+<pad name="9" x="-5.75" y="0" drill="1.6"/>
+<pad name="10" x="-5.75" y="-4.5" drill="1.6"/>
+<pad name="11" x="-4" y="-8" drill="1.6"/>
+<pad name="12" x="0" y="-9" drill="1.6"/>
+<wire x1="-10.5" y1="-9" x2="-10.5" y2="9" width="0.127" layer="51"/>
+<wire x1="-10.5" y1="9" x2="10.5" y2="9" width="0.127" layer="51" curve="-128"/>
+<wire x1="10.5" y1="9" x2="10.5" y2="-9" width="0.127" layer="51"/>
+<wire x1="10.5" y1="-9" x2="-10.5" y2="-9" width="0.127" layer="51" curve="-128"/>
+<circle x="0" y="0" radius="1.27" width="0.127" layer="51"/>
+</package>
+<package name="INS-1">
+<pad name="1" x="0" y="3" drill="0.8"/>
+<pad name="2" x="0" y="-3" drill="0.8"/>
+<circle x="0" y="0" radius="3.5" width="0.127" layer="51"/>
+<circle x="0" y="1.778" radius="0.179603125" width="0.127" layer="21"/>
 </package>
 </packages>
 <symbols>
@@ -115,6 +121,16 @@ Using "Mill-Max Manufacturing Corp. 0341-0-15-15-30-27-10-0" pin socket</descrip
 <wire x1="5.08" y1="12.7" x2="-5.08" y2="12.7" width="0.254" layer="94" curve="180"/>
 <text x="-5.08" y="17.78" size="1.27" layer="95">&gt;NAME</text>
 </symbol>
+<symbol name="NEON_BULB">
+<pin name="A" x="0" y="7.62" visible="pad" length="middle" rot="R270"/>
+<pin name="C" x="0" y="-7.62" visible="pad" length="middle" rot="R90"/>
+<circle x="0" y="0" radius="5.08" width="0.254" layer="94"/>
+<wire x1="-1.524" y1="2.54" x2="1.524" y2="2.54" width="0.254" layer="94"/>
+<circle x="0" y="-2.032" radius="0.508" width="0.254" layer="94"/>
+<circle x="2.54" y="-1.27" radius="0.254" width="0.508" layer="94"/>
+<text x="-7.62" y="5.08" size="1.27" layer="95">&gt;NAME</text>
+<text x="-7.62" y="-7.62" size="1.27" layer="96">&gt;VALUE</text>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="IN-12B_PS" prefix="L">
@@ -136,6 +152,22 @@ Using "Mill-Max Manufacturing Corp. 0341-0-15-15-30-27-10-0" pin socket</descrip
 <connect gate="G$1" pin="K8" pad="4"/>
 <connect gate="G$1" pin="K9" pad="3"/>
 <connect gate="G$1" pin="KDOT" pad="12"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="INS-1">
+<gates>
+<gate name="G$1" symbol="NEON_BULB" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="INS-1">
+<connects>
+<connect gate="G$1" pin="A" pad="1"/>
+<connect gate="G$1" pin="C" pad="2"/>
 </connects>
 <technologies>
 <technology name=""/>
